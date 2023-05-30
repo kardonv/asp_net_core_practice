@@ -1,0 +1,48 @@
+﻿@model TodoItemUpdateBindingModel
+@{
+    ViewData["Title"] = "Edit todo item";
+}
+
+@section Header {
+    <div class="row">
+        <div class="col">
+            <h3>Edit Item</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a asp-action="Index">&larr;Back</a>
+        </div>
+    </div>
+}
+
+<div class="col-9">
+    <form asp-action="edit" method="post">
+        <div class="form-group mb-3">
+            <label asp-for="Id" class="form-label"></label>
+            <input asp-for="Id" class="form-control" disabled>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3 form-check">
+            <input asp-for="HasDone" class="form-check-input">
+            <label class="form-check-label" asp-for="HasDone"></label>
+        </div>
+        <div class="form-group mb-3">
+            <label asp-for="OnDate" class="form-label"></label>
+            <input asp-for="OnDate" class="form-control">
+            <span asp-validation-for="OnDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Edit" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

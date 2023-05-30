@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TodoItemViewModel>
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Todo " + Localizer["List"];
+    var a = Localizer["List"];
+}
+
+@section Header {
+    <div class="row">
+        <div class="col">
+            <h3>Todo @Localizer["List"]</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <a asp-action="create" class="btn btn-primary" role="button">@Localizer["Create"]</a>
+        </div>
+    </div>
+}
+
+<div class="col-9">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>@Localizer["Name"]</th>
+                <th>@Localizer["Description"]</th>
+                <th>@Localizer["Done"]</th>
+                <th>@Localizer["OnDate"]</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" asp-for="@item.HasDone" disabled id="flexCheckDefault">
+                        </div>
+                    </td>
+                    <td>
+                        @item.OnDate
+                    </td>
+                    <td>
+                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-primary" role="button">@Localizer["Edit"]</a>
+                    </td>
+                    <td>
+                        <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger" role="button">@Localizer["Delete"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
