@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 
 /**
- * 1. Authorization
  * 2. AutoMapper
  * 3. Split project
- * 4. Select language on client
  */
 namespace WebApplication1.Controllers
 {
@@ -18,6 +17,7 @@ namespace WebApplication1.Controllers
             Context = context;
         }
 
+        [Authorize]
         public IActionResult List()
         {
             var todos = Context.TodoItems.ToList();
@@ -32,6 +32,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Create(TodoItemCreateBindingModel model)
         {
+            var userName = User.Identity.Name;
             if (ModelState.IsValid)
             {
                 var entity = new TodoItemViewModel()

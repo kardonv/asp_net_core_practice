@@ -1,0 +1,14 @@
+D:\Cources\.NET\WebApplication1\WebApp.DAL\bin\Debug\net7.0\WebApp.DAL.deps.json
+D:\Cources\.NET\WebApplication1\WebApp.DAL\bin\Debug\net7.0\WebApp.DAL.runtimeconfig.json
+D:\Cources\.NET\WebApplication1\WebApp.DAL\bin\Debug\net7.0\WebApp.DAL.dll
+D:\Cources\.NET\WebApplication1\WebApp.DAL\bin\Debug\net7.0\WebApp.DAL.pdb
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.csproj.AssemblyReference.cache
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.AssemblyInfoInputs.cache
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.AssemblyInfo.cs
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.csproj.CoreCompileInputs.cache
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.dll
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\refint\WebApp.DAL.dll
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.pdb
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\WebApp.DAL.genruntimeconfig.cache
+D:\Cources\.NET\WebApplication1\WebApp.DAL\obj\Debug\net7.0\ref\WebApp.DAL.dll

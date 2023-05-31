@@ -1,6 +1,9 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
-using WebApplication1.Models;
+using WebApp.BLL.Interfaces;
+using WebApp.BLL.Services;
+using WebApplication1.Infrastructure;
 
 namespace WebApplication1
 {
@@ -13,15 +16,27 @@ namespace WebApplication1
             // Localization
             builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
-            // DB
-            builder.Services.AddScoped<ApplicationContext>();
-
             // Add services to the container.
             builder.Services.AddControllersWithViews()
                 .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
 
-            var app = builder.Build();
+            builder.Services.AddAuthentication("Cookies")
+                .AddCookie(options => options.LoginPath = "/account/login");
+            builder.Services.AddAuthorization();
+
+            var mapperConfig = new MapperConfiguration(config =>
+            {
+                config.AddProfile(new UserProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            builder.Services.AddSingleton(mapper);
+
+            // BLL
+            builder.Services.AddSingleton<IUserService, UserService>();
+
+            var app = builder.Build();            
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -43,9 +58,9 @@ namespace WebApplication1
                 SupportedCultures = supportedCultures,
                 SupportedUICultures = supportedCultures,
                 RequestCultureProviders = new List<IRequestCultureProvider> {
-                    new QueryStringRequestCultureProvider()
+                    new CookieRequestCultureProvider()
                     {
-                        QueryStringKey = "lang"
+                        CookieName = "lang"
                     }
                 }
             };
@@ -55,12 +70,12 @@ namespace WebApplication1
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Todo}/{action=List}/{id?}");
+                pattern: "{controller=todo}/{action=list}/{id?}");
 
             app.Run();
         }

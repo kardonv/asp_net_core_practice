@@ -1,0 +1,15 @@
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.csproj.AssemblyReference.cache
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.AssemblyInfoInputs.cache
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.AssemblyInfo.cs
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.csproj.CoreCompileInputs.cache
+D:\Cources\.NET\WebApplication1\WebApp.BLL\bin\Debug\net7.0\WebApp.BLL.deps.json
+D:\Cources\.NET\WebApplication1\WebApp.BLL\bin\Debug\net7.0\WebApp.BLL.dll
+D:\Cources\.NET\WebApplication1\WebApp.BLL\bin\Debug\net7.0\WebApp.BLL.pdb
+D:\Cources\.NET\WebApplication1\WebApp.BLL\bin\Debug\net7.0\WebApp.DAL.dll
+D:\Cources\.NET\WebApplication1\WebApp.BLL\bin\Debug\net7.0\WebApp.DAL.pdb
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.csproj.CopyComplete
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.dll
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\refint\WebApp.BLL.dll
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\WebApp.BLL.pdb
+D:\Cources\.NET\WebApplication1\WebApp.BLL\obj\Debug\net7.0\ref\WebApp.BLL.dll
